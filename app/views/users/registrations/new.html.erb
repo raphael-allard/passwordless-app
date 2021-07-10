@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
+      <h2>Registration</h2>
+
+      <%= simple_form_for @user do |f| %>
+        <%= f.input :email %>
+        <%= f.input :username %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
