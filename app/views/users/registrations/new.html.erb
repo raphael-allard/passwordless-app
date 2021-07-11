@@ -3,10 +3,10 @@
     <div class="col-12 col-sm-8 col-md-4 offset-sm-2 offset-md-4">
       <h2>Registration</h2>
 
-      <%= simple_form_for @user do |f| %>
+      <%= simple_form_for @user, url: users_registrations_path do |f| %>
         <%= f.input :email %>
         <%= f.input :username %>
-        <%= f.submit %>
+        <%= f.submit "Create account" %>
       <% end %>
     </div>
   </div>
