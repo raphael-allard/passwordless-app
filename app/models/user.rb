@@ -24,7 +24,11 @@ class User < ApplicationRecord
   end
 
   def login_link
-    "http://localhost:3000/auth?token=#{self.login_token}"
+    "http://localhost:3000/auth?user_id=#{self.id}&token=#{self.login_token}"
+  end
+
+  def valid_token?(token)
+    self.login_token == token
   end
 
   def login_token_expired?
