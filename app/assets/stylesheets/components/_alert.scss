@@ -1,6 +1,36 @@
 .alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  right: 15px;
   z-index: 1000;
+  height: 35px;
+  width: 350px;
+  bottom: 100px;
+  border-radius: 5px;
+  padding: 30px 5px;
+  p {
+    font-size: 14px;
+    color: white;
+  }
+}
+
+.m-1 {
+  margin: 0!important;
+}
+
+.alert-warning {
+  background-color: #a72c2c;
+  border: none;
+  color: white;
+}
+
+.alert-dismissible .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  z-index: 2;
+  padding: 0;
+  color: inherit;
 }

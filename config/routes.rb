@@ -3,9 +3,8 @@ Rails.application.routes.draw do
 
   namespace :users do
     resources :registrations, only: [:new, :create]
-    resources :sessions, only: [:new, :create]
+    resources :sessions, only: [:new, :create, :destroy]
   end
 
-  # get '/auth/:user_id/:token', to: 'session#auth'
   get '/auth', to: 'users/sessions#auth'
 end
