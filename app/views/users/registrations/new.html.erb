@@ -6,8 +6,10 @@
       <%= simple_form_for @user, url: users_registrations_path do |f| %>
         <%= f.input :email %>
         <%= f.input :username %>
-        <%= f.submit "Create account" %>
+        <%= f.submit "Create account", class: "btn btn-primary" %>
       <% end %>
+
+      <%= link_to "Sign in", new_users_session_path, class: "btn btn-secondary mt-2" %>
     </div>
   </div>
 </div>

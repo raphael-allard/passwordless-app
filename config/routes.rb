@@ -6,5 +6,6 @@ Rails.application.routes.draw do
     resources :sessions, only: [:new, :create]
   end
 
-  # get '/auth/:user_id/:token', to: 'sessions#auth', controller: 'users/registrations'
+  # get '/auth/:user_id/:token', to: 'session#auth'
+  get '/auth', to: 'users/sessions#auth'
 end

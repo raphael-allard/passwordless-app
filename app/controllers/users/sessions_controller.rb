@@ -17,7 +17,7 @@ class Users::SessionsController < ApplicationController
   end
 
   def create
-    value = params[:value].to_s
+    value = params[:value]
     user = User.find_user_by(value)
   
     if !user

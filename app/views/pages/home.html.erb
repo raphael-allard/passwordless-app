@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>HOME PAGE</h1>
+
+<% if session[:email] %>
+  <p>You're connected</p>
+<% else %>
+  <%= link_to "Login", new_users_session_path, class: "btn btn-primary" %>
+<% end %>

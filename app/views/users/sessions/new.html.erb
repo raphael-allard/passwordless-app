@@ -6,8 +6,10 @@
       <%= form_tag users_sessions_path do %>
         <label> Email / Username </label>
         <%= text_field_tag "value" %>
-        <%= submit_tag "Login" %>
+        <%= submit_tag "Login", class: "btn btn-primary" %>
       <% end %>
+
+      <%= link_to "Sign up", new_users_registration_path, class: "btn btn-secondary mt-2" %>
     </div>
   </div>
 </div>
