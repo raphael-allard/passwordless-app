@@ -1,9 +1,8 @@
 <h1>HOME PAGE</h1>
 
-<% if session[:email] %>
-<p>hello</p>
-  <%#= link_to "Logout", users_session_path(user.id), method: :post, class: "btn btn-primary" %>
+<% if @current_user %>
+  <p>You're connected</p>
+  <%= link_to "Logout", users_session_path(@current_user), method: :delete, class: "btn btn-primary" %>
 <% else %>
   <%= link_to "Login", new_users_session_path, class: "btn btn-primary" %>
 <% end %>
-<%# raise %>
