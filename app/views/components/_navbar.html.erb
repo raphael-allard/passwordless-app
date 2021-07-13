@@ -1,0 +1,8 @@
+<div class="navbar">
+  <%= link_to "Passwordless App", root_path, class: "header-h2" %>
+  <% if @current_user %>
+    <%= link_to "Log out", users_session_path(@current_user), method: :delete, class: "btn btn-danger" %>
+  <% else %>
+    <%= link_to "Login", new_users_session_path, class: "btn btn-primary" %>
+  <% end %>
+</div>
